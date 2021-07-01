@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+  {% block content %}
+  <div class="container">
+    <h5 class="text-center mt-3 text-dark">Update Todo Item</h3>
+    <form method="POST" autocomplete="off" class="my-5">
+      <div class="form">  
+        {% csrf_token %}  
+        {{ form }}
+      </div>
+      <div class="submit-button">
+        <button type="submit" class="btn btn-dark">Update</button>
+      </div> 
+    </form>
+  </div>
+  {% endblock %}
